@@ -1,0 +1,21 @@
+<div>
+ <div class="form-group" style="width: 90%;">
+            <label>Wo catty <span class="text-danger">*</span></label>
+    			<select name="wocatty" id="wocatty" class="form-control select2bs4"  style="width: 100%">
+    				<option value='0' selected="selected">---Please Select Wo catty---</option>
+    				<option th:each="workcat : ${workcat}" th:value="${workcat.work_cat_code}" th:text="${workcat.work_cat_code +' - '+ workcat.work_cat_name}"></option>
+        		</select> 
+           </div>
+      
+               
+             <!--Work Code -->
+                 
+         <div class="form-group" style="width: 90%;">
+           <label>Work Code<span class="text-danger">*</span></label>
+    			<select name="wrk_code" id="wrk_code" class="form-control select2bs4" onchange="getregid(this.value);" style="width: 100%">
+    				<option value='0'>---Please Select Work Code---</option>
+    				<option></option>
+        		</select>       
+         </div>
+        </div>   
+</div>
